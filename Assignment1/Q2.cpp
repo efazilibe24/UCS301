@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 
-// Q.2 REMOVING DUPLICATE ELEMENTS IN A ARRAY  ( WORKS FOR UPTO 1 DUPLICATE)// 
+// Q.2 REMOVING DUPLICATE ELEMENTS IN A ARRAY // 
 
 int linearSearch(int ele);
 void deleteElementbyIdx(int idx);
 void displayArray();
 
 
- int arr[100] = {7, 1, 2, 2, 3, 4, 4, 7};
- int arr_size = 8;
+ int arr[100] = {7, 1, 2, 2, 3, 4, 4,2, 7};
+ int arr_size = 9;
 
 
 int main()
