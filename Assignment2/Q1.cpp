@@ -16,12 +16,12 @@ int main() {
     int a = 0;
     int b = arr_size - 1;
 
-    int m = ( a + b ) / 2;
+    int m =  a + ( (b - a) / 2 );
 
 
     while (a <= b)
     {
-
+            
         if (target > arr[arr_size - 1] || target < arr[0])
         {
             cout << "Target not present in array" << endl;
@@ -43,7 +43,7 @@ int main() {
             break;
         }
 
-        m = ( a + b ) / 2 ;
+        m =  a + ( (b - a) / 2 ) ;
     }
 
 

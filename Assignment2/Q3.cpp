@@ -9,7 +9,7 @@ using namespace std;
 
 
 int arr[5] = {1, 2, 4, 5, 6};
-int n = 6;
+int n = 5;
 
 int main()
 {
@@ -30,25 +30,39 @@ int main()
 
     int a = 0;
     int b = n - 1;
-    int i = 0;
 
     int m = (a + b) / 2;
 
     while (a <= b)
     {
-
-        if (arr[i] == (i+1))
+        if (arr[m + 1] != arr[m] + 1)
         {
-            a = m + 1;
+            // Missing no. found
+            cout << arr[m] + 1 << " is the missing number" << endl;
+            break;
+        }
+        else if (arr[m-1] != arr[m] - 1)
+        {
+            // Missing no. found
+            cout << arr[m] - 1 << " is the missing number" << endl;
+            break;
+        }
+
+
+
+        if (a + m + 1 != arr[m])
+        {
+            // Missing number is on the left side
+            b = m - 1;
         }
         else
         {
-            b = m - 1;
+             // Missing number is on the right side
+            a = m + 1;
             
         }
 
-        m = ( a + b ) / 2 ;
-        i++;
+        m = a + (b - a) / 2;
     }
 
     return 0;

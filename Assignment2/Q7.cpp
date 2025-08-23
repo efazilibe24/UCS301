@@ -10,7 +10,6 @@ int n = 10;
 int main()
 {
 
-
     int count = 0;
     for (int i = 0; i < n; i++)
     {   
@@ -23,8 +22,6 @@ int main()
             {
                 dupli_found = true;
             }
-            
-            
         }
 
         if (!dupli_found)
