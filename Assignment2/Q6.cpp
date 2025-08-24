@@ -15,7 +15,8 @@ int main()
     const int row_count = 6;
     const int column_count = 3;
 
-    int sp_mat[6][3] = {
+    int sp_mat[6][3] = 
+    {
         {0, 2, 3},  
         {0, 4, 4},
         {1, 2, 5},
@@ -27,15 +28,6 @@ int main()
 
     // (a) Transpose of the sparse matrix //
 
-    int trans_mat[column_count][row_count];
-
-    for (int i = 0; i < column_count; i++)
-    {
-        for (int j = 0; j < row_count; j++)
-        {
-            
-        }
-    }
 
 
 

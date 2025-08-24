@@ -8,23 +8,50 @@ void deleteElementbyIdx(int idx);
 void displayArray();
 
 
- int arr[100] = {7, 1, 2, 2, 3, 4, 4,2, 7};
+ int arr[100] = {7, 1, 2, 2, 3, 4, 4, 2, 7};
+
  int arr_size = 9;
 
 
 int main()
 {
-
-    for (int i = 0; i < arr_size - 1; i++)
+    bool swapped = false;
+    for (int i = 0; i < arr_size; i++)
     {
-        int curr_element = arr[i];
-        for (int j = i + 1; j < arr_size + 1; j++)
+        
+
+        for (int j = i - 1; j  > -1; j--)
         {
-            if (arr[j] == curr_element)
+            swapped = false;
+            
+            if (arr[i] == arr[j])
             {
-                deleteElementbyIdx(j);
+
+                if (i == arr_size - 1)
+                {
+                    arr_size--;
+                    
+                }
+                else
+                {
+                int temp = arr[arr_size - 1];
+                
+                arr[arr_size - 1] = arr[i];
+                arr[i] = temp;
+                swapped = true;
+                arr_size--;
+                }
             }
+
+
         }
+
+        if (swapped == true)
+        {
+            i -= 1;
+        }
+
+
     }
 
     displayArray();

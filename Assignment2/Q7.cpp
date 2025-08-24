@@ -1,35 +1,33 @@
 #include <iostream>
 using namespace std;
 
+// 7) Let A[1 …. n] be an array of n real numbers. A pair (A[i], A[j ]) is said to be an
+// inversion if these numbers are out of order, i.e., i < j but A[i]>A[j ]. Write a program to
+// count the number of inversions in an array.
 
-// 8) Write a program to count the total number of distinct elements in an array of length n // 
 
-int arr[10] = { 1, 7, 2, 2, 3, 3, 4,  5, 5, 7};
-int n = 10;
+int arr[10] = { 4, 2, 1, 5, 6, 9, 7, 3, 8, 10};
+int arr_size = 10;
 
 int main()
 {
+    int no_of_pairs = 0;
 
-    int count = 0;
-    for (int i = 0; i < n; i++)
-    {   
-        bool dupli_found = false;
-        int current_idx = i;
 
-        for (int j = 0; j < n; j++)
+    for (int i = 0; i < arr_size; i++)
+    {
+
+        for (int j = i - 1; j > -1; j--)
         {
-            if (arr[j] == arr[i] && j != current_idx)
+            if (arr[j] > arr[i])
             {
-                dupli_found = true;
+                no_of_pairs++;
             }
         }
 
-        if (!dupli_found)
-        {
-            count++;
-        }
     }
 
-    cout << "There are "<< count << " unique elements in the array."<< endl;
+    cout << "There are " << no_of_pairs << " inversion pairs in the array."<< endl;
+
     return 0;
 }

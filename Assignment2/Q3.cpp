@@ -49,7 +49,6 @@ int main()
         }
 
 
-
         if (a + m + 1 != arr[m])
         {
             // Missing number is on the left side

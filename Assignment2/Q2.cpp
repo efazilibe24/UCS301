@@ -12,10 +12,11 @@ int no_of_it = 0;
 
 int main()
 {
-    for (int i = 0; i < arr_size; i++)
+
+    for (int i = 0; i < arr_size - 1; i++)
     {
         bool swapped = false;
-        for (int j = 0; j < arr_size -1; j++)
+        for (int j = 0; j < arr_size - i - 1; j++)
         {
             if (arr[j] > arr[j+1])
             {
@@ -30,6 +31,7 @@ int main()
         {
             break;
         }
+
 
         no_of_it++;
     }

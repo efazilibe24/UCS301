@@ -60,10 +60,6 @@ int main()
     
     // (b) Tri-gonal Matrix // 
 
-
-
-
-
     
 
     return 0;
