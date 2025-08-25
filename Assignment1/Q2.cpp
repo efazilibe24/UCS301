@@ -7,7 +7,6 @@ int linearSearch(int ele);
 void deleteElementbyIdx(int idx);
 void displayArray();
 
-
  int arr[100] = {7, 1, 2, 2, 3, 4, 4, 2, 7};
 
  int arr_size = 9;
