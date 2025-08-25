@@ -19,10 +19,15 @@ int main()
     cout << "Concatenated string : " << con_cat << endl;
     //(b)
 
-    string rev = "";
-    for (int i =0; i < s1.length(); i++)
-    {
-        rev += s1[s1.length() - 1- i];
+    string rev = "ABCD";
+    char temp;
+    for (int i =0; i < rev.length() / 2; i++)
+    {   
+        temp = rev[i];
+
+        rev[i] = rev[rev.length() - i - 1];
+        rev[rev.length() - i - 1] = temp;
+
     }
     
     cout << "Reversed String : " << rev << endl;
@@ -51,10 +56,10 @@ int main()
 
 
 
-    for (int i = 0; i < alpha_order.length(); i++)
+    for (int i = 0; i < alpha_order.length() - 1; i++)
     {
         bool swapped = false;
-        for (int j = 0; j < alpha_order.length()-1; j++)
+        for (int j = 0; j < alpha_order.length() - i - 1; j++)
         {
             if (alpha_order[j] > alpha_order[j+1])
             {
@@ -84,7 +89,7 @@ int main()
 
     cout << "Your character in lowercase : " << chr << endl;
 
-
+    
 
 
     return 0;
