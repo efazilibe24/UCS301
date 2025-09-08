@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-
+    
     int sp_mat[7][3] = 
     {
         {6, 3, 6},
